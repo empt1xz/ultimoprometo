@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300;1,300&display=swap');
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --cor1: #8E11DF;
+}
+
+* {
+    border: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    width: 100vw;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    visibility: hidden;
+}
+
+#logo {
+    width: 130px;
+    height: 100px;
+    padding: 10px;
+    animation: logo 2s infinite linear;
+    cursor: pointer;
+}
+
+header > h1 {
+    color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding-right: 15px;
+    flex-direction: row-reverse;
+}
+
+@media screen and (width < 514px) {
+    header > h1 {
+         font-size: 12px;
+    }
+
+    h1 > svg {
+        display: none;
+    }
+}
+
+@media screen and (width < 216px) {
+    header > img  {
+        display: none;
+    }
+
+}
+
+
+
+h1 > svg {
+    width: 16px;
+}
+
+@keyframes logo {
+    0% {
+        transform: translatey(7px);
+    }
+    50% {
+        transform: translatey(0px);
+    }
+
+    100% {
+        transform: translatey(7px);
+    }
+}
+
+main {
+    width: 100vw;
+    height: 90%;
+    visibility: hidden;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+    
+
+}
+
+.perfil {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    background: linear-gradient(120deg, white, gray);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'Montserrat';
+    font-style: italic;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#perfillogo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    padding: 5px;
+    
+}
+
+#card {
+    width: 250px;
+    height: 370px;
+    border: 1px solid rgba(144, 32, 235, 0.583);
+    border-radius: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.582);
+    
+}
+
+
+
+
+
+
+
+
+.icones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+span {
+    color: rgba(255, 255, 255, 0.767);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+    display: block;
+    text-align: center;
+}
+
+#dev {
+    width: 20px;
+}
+
+.icones > img {
+    width: 25px;
+    cursor: pointer;
+}
+
+@media screen and (width < 1060px) {
+    main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
